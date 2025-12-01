@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/** salam
- * 
+/*
+ * salam
  * main - Entry point
  *
  * Return: Always 0 (Success)
@@ -16,7 +16,6 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	last_digit = n % 10;
-	
 
 	if (last_digit > 5)
 	{
@@ -31,6 +30,6 @@ int main(void)
 		printf("Last digit of %d is %d and is less than 6 and not 0\n",
 		       n, last_digit);
 	}
-    /*yours code salam*/
+    /* yours code salam */
 	return (0);
 }
