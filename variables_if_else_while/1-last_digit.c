@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/** hello yazdim
+/*
  * main - Entry point
  *
  * Return: Always 0 (Success)
