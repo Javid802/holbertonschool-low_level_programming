@@ -15,6 +15,7 @@ int main(void)
     putchar(letter1);
     letter1++;
     }
+    printf("\n");
     return 0;
 
 }
