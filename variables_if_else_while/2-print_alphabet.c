@@ -7,15 +7,15 @@
  */
 int main(void)
 {
-    char letter1 = 'a';
+	char letter1 = 'a';
 
-    while (letter1 <= 'z')
-    {
-        printf("%c", letter1);
-        letter1++;
-    }
+	while (letter1 <= 'z')
+	{
+		printf("%c", letter1);
+		letter1++;
+	}
 
-    printf("\n");
+	printf("\n");
 
-    return (0);
+	return (0);
 }
