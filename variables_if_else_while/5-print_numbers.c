@@ -7,15 +7,13 @@
  */
 int main(void)
 {
-	char letter1 = 'a';
+	int letter1 = 0;
 
-	while (letter1 <= 'z')
-	{
-		if (letter1 != 'q' && letter1 != 'e')
-		{
-			printf("%c", letter1);
-		}
-		letter1++;
+	while (letter1 <= 9)
+	{	
+	printf("%i", letter1);
+
+	letter1++;
 	}
 
 	printf("\n");
