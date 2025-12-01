@@ -15,11 +15,13 @@ int main(void)
 		printf("%c", letter1);
 		letter1++;
 	}
+
     while (letter2 <= 'Z')
 	{
 		printf("%c", letter2);
 		letter2++;
 	}
+    
 	printf("\n");
 
 	return (0);
