@@ -8,19 +8,18 @@
 int main(void)
 {
 	char letter1 = 'a';
-	char letter2 = 'A';
 
 	while (letter1 <= 'z')
 	{
-		printf("%c", letter1);
+        if (letter1!='q'|| letter1 != 'e')
+        {
+            printf("%c", letter1);
+        }
+		
 		letter1++;
 	}
 
-	while (letter2 <= 'Z')
-	{
-		printf("%c", letter2);
-		letter2++;
-	}
+	
 
 	printf("\n");
 
