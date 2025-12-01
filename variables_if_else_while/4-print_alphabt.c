@@ -11,7 +11,7 @@ int main(void)
 
 	while (letter1 <= 'z')
 	{
-        if (letter1!='q'|| letter1 != 'e')
+        if (letter1!='q'&& letter1 != 'e')
         {
             printf("%c", letter1);
         }
