@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /*
- * main - Entry point
+ * main - Prints the last digit of a random number and its properties
  *
  * Return: Always 0 (Success)
  */
