@@ -12,10 +12,9 @@ void more_numbers(void)
 		for (j = 0; j <= 14; j++)
 		{
 			if (j >= 10)
-				_putchar('1');   /* tens digit */
-			_putchar('0' + (j % 10)); /* ones digit */
-
-	    }
-        _putchar('\n');
-    }
+				_putchar('1');	/* tens digit */
+			_putchar('0' + (j % 10));	/* ones digit */
+		}
+		_putchar('\n');
+	}
 }
