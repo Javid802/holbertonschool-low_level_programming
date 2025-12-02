@@ -15,7 +15,7 @@ void more_numbers(void)
 				_putchar('1');   /* tens digit */
 			_putchar('0' + (j % 10)); /* ones digit */
 
-		_putchar('\n'); /* newline after each line */
 	    }
+        _putchar('\n');
     }
 }
