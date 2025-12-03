@@ -7,12 +7,11 @@ int main(void)
     int b = 0;
     for (a=0;a<n;a++)
     {
-        for (b=0;b<a;b++)
+        for (b=0;b<n;b++)
         {
-            _putchar(' ');
+            printf("#");
         }
-        _putchar('\\');
-        _putchar('\n');
+        printf("\n");
     }
         
 }
