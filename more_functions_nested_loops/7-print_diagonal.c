@@ -13,9 +13,10 @@ void print_diagonal(int n)
     {
         for (b=0;b<a;b++)
         {
-            printf(" ");
+            _putchar(' ');
         }
-        printf("\\");
-        printf("\n");
+        _putchar('\\');
+        _putchar('\n');
     }
+        
 }
