@@ -1,8 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
-int main(void)
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+void print_diagonal(int n)
 {
-    int n = 0 ;
     int a = 0;
     int b = 0;
     for (a=0;a<n;a++)
@@ -14,6 +18,4 @@ int main(void)
         printf("\\");
         printf("\n");
     }
-        
 }
-
