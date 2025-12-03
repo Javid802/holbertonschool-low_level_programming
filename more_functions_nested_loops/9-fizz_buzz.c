@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - Prints numbers 1 to 100 with FizzBuzz rules
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
