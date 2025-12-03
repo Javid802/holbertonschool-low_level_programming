@@ -2,25 +2,24 @@
 
 int main(void)
 {   
-    int n = 1;
-    for (n = 1;n<100;n++)
-    {
-        if ((n % 3==0)&&(n % 5==0))
+    int n = 10;
+    int count = 1;
+    int spacecount = 1;
+    int a;
+    for (count = 1;count<=n;count++)
+    {   
+        
+        for (spacecount=1;n-count>=spacecount;spacecount++)
         {
-            printf("Fizzbuzz");
+            printf(" ");
         }
-        else if (n%3==0)
+        for (a=1;a<=count;a++)
         {
-            printf("Fizz");
+            printf("#");
         }
-        else if (n%5==0)
-        {
-            printf("Buzz");
-        }
-        else
-        {
-            printf("%d",n);
-        }
-    } 
+        printf("\n");
+    }
+    
+
 }
 
