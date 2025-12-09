@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a right-aligned triangle using #
- * @size: size of the triangle
+ * reset_to_98 - takes a pointer to an int and updates the value to 98
+ * @n: pointer to int
  */
 void reset_to_98(int *n)
 {
-    *n = 98;
+	*n = 98;
 }
