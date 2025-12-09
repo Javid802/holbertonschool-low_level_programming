@@ -16,5 +16,5 @@ void _puts(char *str)
         a++;
 	}
 
-	return (a);
+	
 }
