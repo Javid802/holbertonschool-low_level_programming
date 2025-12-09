@@ -2,21 +2,21 @@
 #include <stdio.h>
 
 /**
- * puts_half - prints the second half of a string
- * @str: pointer to the string
+ * print_array - prints n elements of an array of integers
+ * @a: pointer to the array
+ * @n: number of elements to print
  */
 void print_array(int *a, int n)
 {
-    int i;
-    for (i=0;i<n;i++)
-    {
-        printf("%d",a[i]);
+	int i;
 
-        if (i != n-1)
-        {
-            printf(", ");
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
 
-        }
-    }
-    printf("\n");
+		if (i != n - 1)
+			printf(", ");
+	}
+
+	printf("\n");
 }
