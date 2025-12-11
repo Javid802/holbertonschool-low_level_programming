@@ -45,3 +45,4 @@ int _atoi(char *s)
 
 	return ((int)(sign * num));
 }
+a
