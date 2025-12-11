@@ -10,38 +10,38 @@
  */
 int _atoi(char *s)
 {
-    int sign = 1, found_digit = 0;
-    int64_t num = 0;
+	int sign = 1, found_digit = 0;
+	int64_t num = 0;
 
-    while (*s)
-    {
-        if (*s == '-' && !found_digit)
-        {
-            sign = -sign;
-        }
-        else if (*s >= '0' && *s <= '9')
-        {
-            int digit = *s - '0';
-            found_digit = 1;
+	while (*s)
+	{
+		if (*s == '-' && !found_digit)
+		{
+			sign = -sign;
+		}
+		else if (*s >= '0' && *s <= '9')
+		{
+			int digit = *s - '0';
+			found_digit = 1;
 
-            num = num * 10 + digit;
-        }
-        else if (found_digit)
-        {
-            break;
-        }
+			num = num * 10 + digit;
+		}
+		else if (found_digit)
+		{
+			break;
+		}
 
-        s++;
-    }
+		s++;
+	}
 
-    if (sign == 1 && num > INT_MAX)
-    {
-        return (INT_MAX);
-    }
-    else if (sign == -1 && -num < INT_MIN)
-    {
-        return (INT_MIN);
-    }
+	if (sign == 1 && num > INT_MAX)
+	{
+		return (INT_MAX);
+	}
+	else if (sign == -1 && -num < INT_MIN)
+	{
+		return (INT_MIN);
+	}
 
-    return ((int)(sign * num));
+	return ((int)(sign * num));
 }
