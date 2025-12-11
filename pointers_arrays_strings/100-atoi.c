@@ -24,8 +24,9 @@ int _atoi(char *s)
 		else if (*s >= '0' && *s <= '9')
 		{
 			int digit = *s - '0';
-			found_digit = 1;
 
+			/* Blank line after declaration */
+			found_digit = 1;
 			num = num * 10 + digit;
 		}
 		else if (found_digit)
