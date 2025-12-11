@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdint.h>
 #include <limits.h>
 
 /**
@@ -9,7 +10,8 @@
  */
 int _atoi(char *s)
 {
-    int sign = 1, num = 0, found_digit = 0;
+    int sign = 1, found_digit = 0;
+    int64_t num = 0;  /* daha geniş tip ilə işləyirik */
 
     while (*s)
     {
@@ -20,19 +22,7 @@ int _atoi(char *s)
             int digit = *s - '0';
             found_digit = 1;
 
-            /* Overflow check before multiplying by 10 */
-            if (sign == 1)
-            {
-                if (num > (INT_MAX - digit) / 10)
-                    return INT_MAX;
-            }
-            else
-            {
-                if (num > (-(INT_MIN + digit)) / 10)
-                    return INT_MIN;
-            }
-
-            num = num * 10 + digit;
+            num = num * 10 + digit;  /* int64_t olduğu üçün overflow yoxdur */
         }
         else if (found_digit)
             break;
@@ -40,5 +30,11 @@ int _atoi(char *s)
         s++;
     }
 
-    return num * sign;
+    /* INT_MIN / INT_MAX ilə uyğunlaşdır */
+    if (sign == 1 && num > INT_MAX)
+        return INT_MAX;
+    else if (sign == -1 && -num < INT_MIN)
+        return INT_MIN;
+
+    return (int)(sign * num);
 }
