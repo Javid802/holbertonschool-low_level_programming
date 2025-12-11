@@ -1,36 +1,35 @@
 #include "main.h"
+#include <limits.h>
 
 /**
- * _atoi - convert a string to an integer
+ * _atoi - convert string to int safely
  * @s: string
  *
- * Return: the integer
+ * Return: integer value
  */
 int _atoi(char *s)
 {
     int sign = 1, num = 0, found_digit = 0;
 
-    while (*s != '\0')
+    while (*s)
     {
         if (*s == '-' && !found_digit)
             sign = -sign;
-
         else if (*s >= '0' && *s <= '9')
         {
             int digit = *s - '0';
-
             found_digit = 1;
 
-            /* Overflow check BEFORE multiplying by 10 */
+            /* Overflow check for signed int */
             if (sign == 1)
             {
-                if (num > (2147483647 - digit) / 10)
-                    return 2147483647;
+                if (num > (INT_MAX - digit) / 10)
+                    return INT_MAX;
             }
             else
             {
-                if (num > (2147483648u - digit) / 10)
-                    return -2147483648;
+                if (num > (-(INT_MIN + digit)) / 10)
+                    return INT_MIN;
             }
 
             num = num * 10 + digit;
