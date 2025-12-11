@@ -5,7 +5,7 @@
  * _atoi - convert string to int safely
  * @s: string
  *
- * Return: integer value
+ * Return: converted integer
  */
 int _atoi(char *s)
 {
@@ -20,7 +20,7 @@ int _atoi(char *s)
             int digit = *s - '0';
             found_digit = 1;
 
-            /* Overflow check for signed int */
+            /* Overflow check before multiplying by 10 */
             if (sign == 1)
             {
                 if (num > (INT_MAX - digit) / 10)
