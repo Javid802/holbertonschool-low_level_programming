@@ -29,12 +29,3 @@ int _sqrt_recursion(int n)
 	return (_sqrt_helper(n, 0));
 }
 
-/* Optional test */
-/*
-int main(void)
-{
-	printf("%d\n", _sqrt_recursion(25)); // 5
-	printf("%d\n", _sqrt_recursion(10)); // -1
-	return 0;
-}
-*/
